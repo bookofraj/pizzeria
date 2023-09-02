@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italian Pizaria</title>
+    <style>
+        .html {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            display: flex;
+        }
+
+        li {
+            display: flex;
+            text-align: -webkit-match-parent;
+        }
+
+        .navbar {
+            display: flex;
+        }
+
+        .navbar ul {
+            width: 50%;
+            display: flex;
+            text-decoration: none;
+        }
+
+        .navbar ul li {
+            padding: 12px;
+            align-items: center;
+            font-size: 19px;
+            list-style: none;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .navbar ul li a:hover {
+            text-decoration: none;
+            color: rgb(237, 241, 5);
+            /* font-size: 25px; */
+            cursor: pointer;
+            background-color: brown;
+            border: 2px solid yellow;
+            border-radius: 5px;
+            border-style: groove;
+        }
+
+        .navbar {
+            height: 64px;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(227, 132, 80, 0.654);
+            position: sticky;
+            top: 0;
+        }
+
+        .rightnav {
+            width: 50%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .rightnav input {
+            border-radius: 5px;
+        }
+
+        .rightnav button {
+            border-radius: 5px;
+        }
+
+        .background {
+            background: rgb(0 0 0 / 42%) url("images/welcome_bg.jpg");
+            background-size: cover;
+            background-blend-mode: darken;
+        }
+
+        .welcome img {
+            height: 50%;
+            border: 5px solid white;
+            border-radius: 10px;
+        }
+
+        .main-box {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .welcomeleft {
+            width: 50%;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            padding: 0 0 0 25px;
+            font-family: cursive;
+            font-size: 27px;
+        }
+
+        .welcomeright {
+            width: 50%;
+            align-items: center;
+            justify-content: inherit;
+        }
+
+        .spl {
+            padding: 45px 0 0 0;
+            display: flex;
+            flex-direction: column;
+            background: url(images/spl-bg.jpg);
+            background-size: cover;
+            background-blend-mode: darken;
+            height: 150vh;
+            background-color: rgb(0 0 0 / 42%);
+        }
+
+        .spl h1 {
+            font-family: cursive;
+            font-size: 35px;
+            color: white;
+            padding: 0 0 0 25px;
+        }
+
+        .menu {
+            width: 100%;
+            height: 30vh;
+            justify-content: space-between;
+            background: none;
+            background: none;
+            margin: 25px 75px -10px 15px;
+            /* border: 2px solid white;
+    border-radius: 10px */
+
+        }
+
+        .spl img {
+            width: -webkit-fill-available;
+            border: 3px solid white;
+            border-radius: 10px;
+        }
+
+        .spl-info {
+            /* width: 60%; */
+            font-size: 20px;
+            font-family: cursive;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            padding: 0 0 0 50px;
+        }
+
+        .spl-info h2 {
+            margin: 50px 0 -8px 0;
+        }
+
+        .spl-info p {
+            margin: 0 60px 0 0;
+        }
+
+        .thumbnail {
+            width: 20%;
+            padding: 0 300px 0 0px;
+            /* border-radius: 10px; */
+        }
+
+        .about {
+            background: url("images/about-bg.jpg");
+            background-size: cover;
+            background-blend-mode: darken;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.421);
+            color: white;
+            font-family: cursive;
+            display: flex;
+            flex-direction: column;
+            font-size: 20px;
+            padding: 0 0 0 45px;
+            justify-content: center;
+        }
+
+        .about h2 {
+            display: flex;
+        }
+
+        .contact {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: url(images/italy-water-ways.jpg);
+            background-size: cover;
+            background-blend-mode: darken;
+            background-color: rgba(0, 0, 0, 0.42);
+        }
+
+        .header {
+            background: none;
+            width: 100%;
+            height: 22%;
+            align-items: self-end;
+            color: white;
+            font-family: cursive;
+        }
+
+        .lower-box {
+            width: 100%;
+            height: 80%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .contact-left {
+            background-color: rgba(229, 229, 188, 0.832);
+    width: 45%;
+    height: auto;
+    border: 5px solid white;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    justify-content: space-between;
+        }
+
+        .contact-right {
+            background: url(images/contact-bg.jpeg);
+            background-size: cover;
+            background-blend-mode: darken;
+            background-color: rgb(0 0 0 / 48%);
+            justify-content: center;
+            align-items: center;
+            width: 45%;
+            height: 70%;
+            border: 5px solid white;
+            border-radius: 15px;
+        }
+
+        .contact-right form {
+            display: flex;
+            flex-direction: column;
+            height: inherit;
+            justify-content: space-between;
+            align-items: baseline;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        .contact-right input {
+            border-radius: 5px;
+        }
+
+        .header h2 {
+            padding: 0 0 0 20px;
+        }
+
+        .contact-left h3 {
+            padding: 0 0 0 20px;
+        }
+
+        .contact-left img {
+            width: 51px;
+            height: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html"><img src="images/pizzeria_logo.png" alt="logo" width="50px"></a></li>
+            <li><a href="#home"><b>Home</b></a></li>
+            <li><a href="#speciality"><b>Speciality</b></a></li>
+            <li><a href="#about"><b>About Us</b></a></li>
+            <li><a href="#contact"><b>Contact Us</b></a></li>
+            <li><a href=""><b>ORDER NOW</b></a></li>
+        </ul>
+        <div class="rightnav">
+            <input type="text" name="search" id="search" name="search">
+            <button>Search</button>
+        </div>
+    </div>
+
+    <section class="welcome" id="home">
+        <div class="background main-box">
+            <div class="welcomeleft">
+                <h2>Welcome To The Birthplace of PIZZA</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dicta aliquid officiis expedita, in laboriosam perspiciatis.</p>
+            </div>
+            <div class="welcomeright">
+                <img src="images/chef.jpg" alt="Lead Chef" width="50%">
+            </div>
+        </div>
+    </section>
+
+    <section id="speciality">
+        <div class="spl">
+            <h1><b>Our Specialities</b></h1>
+            <div class="garlicbread menu">
+                <div class="spl-info">
+                    <h2>Garlic Bread</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, odit?</p>
+                </div>
+                <div class="thumbnail"><img src="images/garlic_bread.jpg" alt="Garlic Bread Photo"></div>
+            </div>
+            <div class="arrabiata menu">
+                <div class="thumbnail"><img src="images/arrabiata_pasta.jpg" alt="Red Pasta Photo"></div>
+                <div class="spl-info">
+                    <h2>Arrabiata Pasta</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quaerat!</p>
+                </div>
+            </div>
+            <div class="alfredo menu">
+                <div class="spl-info">
+                    <h2>Alfredo Pasta</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, recusandae?</p>
+                </div>
+                <div class="thumbnail"><img src="images/alfredo_pasta.jpg" alt="White Pasta Photo"></div>
+            </div>
+            <div class="napoli menu">
+                <div class="thumbnail"><img src="images/napoli_pizza.png" alt="Pizza Photo"></div>
+                <div class="spl-info">
+                    <h2>Napoli Pizza</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut, animi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, quo.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, deleniti debitis nisi rem provident
+                tempore consectetur perspiciatis hic! Ipsum nostrum quidem sit error obcaecati impedit provident
+                voluptate aspernatur praesentium amet?</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, consectetur dolorum sunt velit fuga
+                adipisci repudiandae. Delectus animi, magni consequuntur aliquam debitis, quidem inventore non
+                asperiores unde aperiam quia vel. Voluptate sed, dolorum eveniet placeat asperiores maiores
+                exercitationem deleniti fuga?</p>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contact">
+            <div class="header">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="lower-box">
+                <div class="contact-left">
+                    <h3>Follow us @:</h3>
+                    <a href=""><img src="images/facebook.png" alt="facebook page"></a>
+                    <a href=""><img src="images/instagram.png" alt="instagram account"></a>
+                    <a href=""><img src="images/twitter.png" alt="twitter account"></a>
+                    <a href=""><img src="images/youtube-logo.png" alt="youtube channel"></a>
+                </div>
+                <div class="contact-right">
+                    <form action="">
+                        <label for="fullname">Full Name: </label>
+                        <input type="text" id="fullname">
+                        <label for="phone-no">Phone No.: </label>
+                        <input type="tel" id="phone-no">
+                        <label for="email">Email: </label>
+                        <input type="email">
+                        <label for="enquiry-type">Enquiry Type: </label>
+                        <select name="" id="enquiry-type">
+                            <option value=""></option>
+                            <option value="franchise">For a Franchise</option>
+                            <option value="feedback">Give a Feedback about our Services</option>
+                            <option value="complaint">Complaint about something</option>
+                            <option value="carrer">Make a Carrer with us</option>
+                            <option value="others">Others</option>
+                            <input style="height: inherit;" type="text">
+                            <input type="submit">
+                        </select>
+                    </form>
+                </div>
+            </div>
+            </select>
+        </div>
+    </section>
+</body>
+
+</html>
